@@ -115,3 +115,6 @@ The dashboard includes:
 - **Part 2 tab** — filterable bar chart, pie chart, violin plot, and data table
 - **Part 3 tab** — per-population boxplot, strip plot, all-populations comparison, stats table
 - **Part 4 tab** — baseline subset donuts (project, response, sex) and key metrics
+
+## Live Dashboard
+https://loblaw-bio-immune-dashboard.onrender.com
