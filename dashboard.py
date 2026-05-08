@@ -18,6 +18,10 @@ from scipy import stats
 
 DB_PATH = "immune_trial.db"
 
+import subprocess, sys
+if not __import__("os").path.exists(DB_PATH):
+    subprocess.run([sys.executable, "load_data.py"], check=True)
+
 # Auto-build DB if missing
 import subprocess, os as _os
 if not _os.path.exists(DB_PATH):
