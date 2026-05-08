@@ -17,6 +17,11 @@ from dash import Input, Output, dash_table, dcc, html
 from scipy import stats
 
 DB_PATH = "immune_trial.db"
+
+# Auto-build DB if missing
+import subprocess, os as _os
+if not _os.path.exists(DB_PATH):
+    subprocess.run(["python", "load_data.py"], check=True)
 CELL_POPS = ["b_cell", "cd8_t_cell", "cd4_t_cell", "nk_cell", "monocyte"]
 POP_LABELS = {
     "b_cell": "B Cell",
